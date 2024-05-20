@@ -10,15 +10,15 @@
     </div>
   </ul>
   <footer class="footer">
-    <section>
-      <div>
+    <section class="footer-section">
+      <div class="footer-container">
         <h3>Ciavolella S.r.l</h3>
         <p>Via Di Biasio, 144 03043 - Cassino (Fr), Italy</p>
         <p>+39 0776 311097</p>
         <a href="#">info@ciavolella.com </a>
         <p>P.IVA 02831730607</p>
       </div>
-      <div>
+      <div class="footer-container">
         <h3>Naviga</h3>
         <p>Services</p>
         <p>Projects</p>
@@ -26,7 +26,7 @@
         <p>Carreer</p>
         <p>Contact</p>
       </div>
-      <div>
+      <div class="footer-container">
         <h3>Lavora con nol</h3>
         <p>
           Ciavolella engineering è sempre alla ricerca di persone appassionate,
@@ -36,6 +36,7 @@
         <p><a href="#">Clicca aqui</a> e scopri le posizioni aperte.</p>
       </div>
     </section>
+    <div class="footer-copyright">© 2021 - Ciavolella srl - All rights reserved. </div>
   </footer>
 </div>
 
@@ -61,7 +62,23 @@
 
   .footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     background-color: #f5f5f5;
+    padding: 40px;
+    gap: 30px;
+  }
+
+  .footer-section {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .footer-container {
+    width: 200px;
+  }
+
+  .footer-copyright {
+    text-align: center;
   }
 </style>
