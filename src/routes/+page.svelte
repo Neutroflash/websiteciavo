@@ -1,3 +1,6 @@
+<script>
+    import Services from "./Services/services.svelte";
+</script>
 <div class="wrapper">
   <ul class="navbar">
     <img src="#" alt="logo" />
@@ -9,6 +12,9 @@
       <li>CARREER</li>
     </div>
   </ul>
+  <section class="services">
+      <Services/>
+  </section>
   <section class="contacts">
     <h1>CONTACTS</h1>
     <div class="contacts-items">
