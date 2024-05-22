@@ -1,3 +1,14 @@
+
+<!-- Import images from assets folder  -->
+<script src="Counter.js">
+    import Building from "../../assets/BIM.png"
+    import Design from "../../assets/design.png"
+    import Admin from "../../assets/admin.png"
+    import Counter from './Counter.svelte';
+</script>
+
+<!-- SERVICES MAIN PAGE -->
+
 <div class="section-services">
     <h1 class="title-services">SERVICES</h1>
     <hr class="separator">
@@ -14,25 +25,132 @@
     <div class="text3">
         Our main Sectors:
         <ol type="A">
-            <li>Pharmaceutical</li>
-            <li>Life sciencie, and healthcare</li>
-            <li>Chemical</li>
-            <li>Industrial</li>
+            <li style="pointer-events: none; cursor: default;">Pharmaceutical</li>
+            <li style="pointer-events: none; cursor: default;">Life sciencie, and healthcare</li>
+            <li style="pointer-events: none; cursor: default;">Chemical</li>
+            <li style="pointer-events: none; cursor: default;">Industrial</li>
         </ol>
     </div>
 </div>
+<div class="cards-services">
+    <div class="cards">
+        <a href="#">
+            <div class="conteiner-img">
+                <img src={Design} alt="Designimg">
+            </div>
+        </a>
+        <a href="#" style="color: black;">
+            <p class="text-cards"><b>Design</b></p>
+        </a>
+        <ul>
+            <li class="lista-cards" style="pointer-events: none; cursor: default;">Piping & Layout​​​​​</li>
+            <li class="lista-cards">HVAC</li>
+            <li class="lista-cards" style="pointer-events: none; cursor: default;">Clean Room ​</li>
+            <li class="lista-cards" style="pointer-events: none; cursor: default;">Stress Analysis & Support​</li>
+            <li class="lista-cards" style="pointer-events: none; cursor: default;">Process</li>
+            <li class="lista-cards" style="pointer-events: none; cursor: default;">Civil & Structures</li>
+            <li class="lista-cards" style="pointer-events: none; cursor: default;">Architectural and Building design</li>
+            <li class="lista-cards">Steel detailing</li>
+        </ul>
+    </div>
+    <div class="cards">
+        <a href="#">
+            <div class="conteiner-img">
+                <img src={Building} alt="BIMimg">
+            </div>
+        </a>
+            <a href="#" style="color: black;">
+                <p class="text-cards"><b>BIM</b></p>
+            </a>
+            <ul>
+                <li class="lista-cards-1">Conceptual & Detailed Design</li>
+                <li class="lista-cards-1">Analysis & Quantity Surveyors</li>
+                <li class="lista-cards-1" style="pointer-events: none; cursor: default;">3D laser scanning  for an accurate <br> and complete site survey </li>
+                <li class="lista-cards-1"><b>Clash Detection</b></li>
+                <li class="lista-cards-1"><b>Project Managers:</b> 4D Construction<br>sequencing - 5D Cost Management & Planning Reporting</li>
+                <li class="lista-cards-1">Facility management</li>
+            </ul>
+    </div>
+    <div class="cards">
+        <a href="#">
+            <div class="conteiner-img">
+                <img src={Admin} alt="Adminimg">
+            </div>
+        </a>
+        <a href="#" style="color: black;">
+            <p class="text-cards"><b>Management and Consultancy</b></p>
+        </a>
+        <ul>
+            <li class="lista-cards-2" style="pointer-events: none; cursor: default;">Project Management</li>
+            <li class="lista-cards-2" style="pointer-events: none; cursor: default;">Construction Management</li>
+            <li class="lista-cards-2" style="pointer-events: none; cursor: default;">Project Controls</li>
+            <li class="lista-cards-2" style="pointer-events: none; cursor: default;">REACH Consultancy Services</li>
+            <li class="lista-cards-2" style="pointer-events: none; cursor: default;">Commissioning</li>
+        </ul>
+    </div>
+</div>
 
+<div class="message">
+    <h1 class="text-message">WE CAN SUPPORT YOU THROUGH ALL PROJECT PHASES</h1>
+   </div> 
 
+   <!-- company section -->
+
+<div class="company-background">
+    <div class="conteiner-tilte-text">
+        <div class="conteiner-company">
+            <div class="conteiner-title-company">
+                <h1 class="companytitle">COMPANY</h1>
+                <hr class="separator-company">
+                <span class="text-title-company">
+                    Ciavolella engineering, a dynamic and flexible team with the aim to deliver the highest possible engineering quality to meet the client requirements.
+                </span>
+            </div>
+            <div class="conteiner-text-company">
+                <p class="text">We care very much for our customer needs. Health and Safety, quality, correct timing, and budget limits are primary goals for us.</p>
+                <p class="text">The staff in Ciavolella engineering is a combinations of senior experienced engineers and young dynamic ones to form a passionate, motivated, and collaborative team.</p>
+                <p class="text">We are able to provide engineering services from the first concept idea, throughout the project and the construction to the very last “as built” drawing, Comprising multidisciplinary aspects that your project may need to make it reality, well integrated in the right BIM model.</p>
+            </div>
+        </div>
+        <div class="footer-company">
+            <div class="information-ciavolella">
+                <div class="Counter-years">
+                    <Counter target={1980} duration={1500} />
+                    <p class="text-counter">Year Estabilished</p>
+                </div>
+                <div class="Counter-years">
+                    <Counter target={1576} duration={1500} />
+                    <p class="text-counter">Projects Completed</p>
+                </div>
+                <div class="Counter-years">
+                    <div class="align">
+                        <Counter target={100} duration={1500} /><span style="font-size: 3rem;">+</span>
+                    </div>
+                    <p class="text-counter">Clients</p>
+                </div>
+                <div class="Counter-years">
+                    <Counter target={7} duration={1500} />
+                    <p class="text-counter">Nations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Styles section -->
 
 <style>
 
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jersey+25&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap');
+
+    /* Styles Services */
 
     .section-services{
         margin-top: 3rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .title-services{
@@ -56,6 +174,8 @@
     .text-services{
         background-color: #54B3EE;
         width: 100%;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
@@ -85,13 +205,210 @@
 
     .text3{
         font-family: "Sora", sans-serif;
+        margin: 0;
         color: #FFFFFF;
+        font-size: 1.5rem;
+        padding-bottom: 5rem;
         margin: 25%;
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    .cards-services{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #F5F5F5;
+    }
+
+    .cards{
+        margin: 4rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 600px;
+        width: 350px;
+    }
+
+    .conteiner-img{
+        margin: 1rem;
+        margin-top: 2rem;
+        border: 1px solid rgb(65, 128, 181);
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        transition: 1s;
+    }
+
+    .conteiner-img:hover{
+        background-color: rgba(16, 109, 176, .21);
+    }
+
+    .text-cards{
+        font-family: "Sora", sans-serif;
+        margin: 1rem;
+        margin-top: 0;
+        transition: 0.1s;
+    }
+
+    .text-cards:hover{
+        color: rgb(65, 128, 181);
+    }
+
+    ul{
+        list-style-type: disc;
+        margin-bottom: 1rem;
+    }
+
+    li:hover{
+        color: rgb(65, 128, 181);
+        text-decoration: underline;
+    }
+
+    .lista-cards{
+        font-family: "Sora", sans-serif;
+        margin: 1rem;
+        padding-top: 0;
+    }
+
+    .lista-cards-1{
+        font-family: "Sora", sans-serif;
+        margin: 1rem;
+        padding-top: 0;
+        font-size: 15px;
+    }
+
+    .lista-cards-2{
+        font-family: "Sora", sans-serif;
+        margin: 1rem;
+        padding-top: 0;
+    }
+
+    img{
+        margin: 1rem auto;
+        width: 100px;
+        height: 100px;
+    }
+
+    .message{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(0deg, #54B3EE, 30% , #F5F5F5);
+        margin: 0;
+    }
+
+    .text-message{
+        margin: 2rem;
+        font-family: "Sora", sans-serif;
+        font-style: italic;
+    }
+
+    /* Company styles section*/
+
+    .company-background{
+        background-image: url(https://static.wixstatic.com/media/f7133f9895b24525a2ad16c1e778c9fa.jpg/v1/fill/w_1072,h_750,al_c,q_90,enc_auto/f7133f9895b24525a2ad16c1e778c9fa.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .conteiner-tilte-text{
+        width: 100%;
+        padding: 1.5rem;
+        padding-bottom: 0;
+        padding-left: 0;
+    }
+
+    .conteiner-company{
+        margin: 2rem;
+        margin-left: 10%;
+        padding: 4rem;
+        justify-content: left;
+        width: 25%;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .conteiner-title-company{
+        width: 100%;
+    }
+
+    .companytitle{
+        font-family: "Sora", sans-serif;
+        color: #AAAAAA;
+        font-size: 3rem;
+    }
+
+    .separator-company{
+        width: 30%;
+        border: 5px solid #1B99E8;
+        margin: 0.5rem;
+        margin-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    .text-title-company{
+        font-family: "Sora", sans-serif;
+        color: #555555;
         font-size: 1.5rem;
-        padding-bottom: 5rem;
+    }
+
+    .conteiner-text-company{
+        margin: 0;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .text{
+        font-family: "Sora", sans-serif;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #555555;
+    }
+
+    /* foot section of the company section */
+
+    .footer-company{
+        width: 100%;
+        margin: 0;
+        background-color: #1B99E8;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .information-ciavolella{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 7rem;
+    }
+
+    .Counter-years{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Sora", sans-serif;
+        margin: 2rem;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .align{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
 </style>
