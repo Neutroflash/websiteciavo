@@ -1,11 +1,84 @@
 
 <!-- Import images from assets folder  -->
-<script src="Counter.js">
+<script>
     import Building from "../../assets/BIM.png"
     import Design from "../../assets/design.png"
     import Admin from "../../assets/admin.png"
-    import Counter from './Counter.svelte';
+    import Counter from './Counter.svelte'
+    import Carousel from 'svelte-carousel'
+    import { browser } from '$app/environment';
+    import { Button } from 'flowbite-svelte';
+    import { ThumbsUpSolid, ArrowRightOutline, ArrowLeftOutline } from 'flowbite-svelte-icons';
+
+    let carousel;
+    const handleNextClick = () => {
+    carousel.goToNext()
+  }
+  const handlePrevClick = () => {
+    carousel.goToPrev()
+  }
+
 </script>
+
+<div class="conteiner-carousel-divs">
+    {#if browser}
+<Carousel
+  bind:this={carousel}
+  autoplay
+  autoplayDuration={8000}
+  autoplayProgressVisible
+  pauseOnFocus
+>
+
+<div slot="next" class="flex w-full h-full justify-end items-center m-0 bg-transparent absolute">
+    <Button on:click={handleNextClick} pill class="!p-2 m-3 bg-sky-400 hover:bg-[#8B0000]"><ArrowRightOutline class="w-6 h-6" /></Button>
+</div>
+
+<div slot="prev" class="flex w-1/2 h-full justify-start items-center m-0 bg-transparent absolute z-[1]">
+    <Button on:click={handlePrevClick} pill class="!p-2 m-3  bg-sky-400 hover:bg-[#8B0000]"><ArrowLeftOutline class="w-6 h-6" /></Button>
+</div>
+
+  <div class="continer-div-1">
+        <h5 class="mb-2 font-bold tracking-tight text-gray-50  text-6xl !bg-pink-500 pl-4"><b>BIM</b></h5>
+        <p class="font-bold tracking-tight text-white text-2xl mt-8 mb-8"><b>FOR</b></p>
+        <p class="mb-6 font-bold tracking-tight text-gray-50 text-4xl !bg-blue-600/80 p-4 pl-2 pr-2"><b>PHARMACEUTICAL</b></p>
+        <p class="mb-2 font-bold tracking-tight text-gray-50 text-4xl !bg-sky-500/80"><b>PLANTS</b></p>
+    
+  </div>
+  <div class="continer-div-2">
+    
+        <h5 class="mb-2 font-bold tracking-tight text-gray-50  text-6xl !bg-pink-500 pl-4"><b>BIM</b></h5>
+        <p class="font-bold tracking-tight text-gray-600 text-2xl mt-8 mb-8"><b>FOR</b></p>
+        <p class="mb-6 font-bold tracking-tight text-gray-50 text-4xl !bg-blue-600/80 p-4 pl-2 pr-2"><b>PHARMACEUTICAL</b></p>
+        <p class="mb-2 font-bold tracking-tight text-gray-50 text-4xl !bg-sky-500/80"><b>PLANTS</b></p>
+    
+  </div>
+  <div class="continer-div-3">
+    <div class="!bg-sky-400/50 w-full h-full flex justify-center items-center flex-col">
+        <h1 class="mb-2 font-bold tracking-tight text-gray-50  text-9xl">BIM</h1>
+        <p class="text-[#8B0000] mb-2 font-semibold text-2xl " style="letter-spacing: 0.25em; word-spacing: 0.25em;">the new design methodology</p>
+        <Button class="mt-[8rem] bg-[#8B0000] hover:bg-white hover:text-[#8B0000] " size="md" pill href="#">MORE ABOUT US</Button>
+    </div>
+  </div>
+  <div class="continer-div-4">
+    <div class="flex justify-start align-middle flex-col">
+    <p class="text-[#8B0000] mb-2 text-4xl mt-12 font-mono" style="letter-spacing: 0.10em">Detail Engineering</p>
+    <p class="text-[#8B0000] mb-2 text-4xl font-mono" style="letter-spacing: 0.10em">We love complex projects...</p>
+    <Button class="mt-[5rem] bg-[#8B0000] hover:bg-white hover:text-[#8B0000] w-48" pill href="#">MORE ABOUT US</Button>
+    </div>
+  </div>
+  <div class="continer-div-5">
+    <div class="!bg-sky-600/60 w-full h-full flex justify-center items-center flex-col">
+        <p class="text-[white] mb-2 font-bold text-5xl font-mono">Efficient detailing</p>
+        <p class="text-[#BADA55] mb-2 font-bold text-5xl font-mono mt-12">makes</p>
+        <p class="text-[white] mb-2 font-bold text-5xl font-mono mt-12">a big complex steelwork</p>
+        <p class="text-[white] mb-2 font-bold text-5xl font-mono mt-12">simple, fast and easy</p>
+    </div>
+  </div>
+  <div class="continer-div-6"></div>
+</Carousel>
+{/if}
+</div>
 
 <!-- SERVICES MAIN PAGE -->
 
@@ -143,14 +216,98 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jersey+25&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap');
 
-    /* Styles Services */
-
-    .section-services{
-        margin-top: 3rem;
+    .conteiner-carousel-divs{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        gap: 0;
+    }
+
+    .continer-div-1{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        padding-right: 7%;
+        width: 100%;
+        height: 80vh; 
+        background-image: url("https://static.wixstatic.com/media/c5cdf7_d2feb66b1bdc4bdbb93750f9112e5aa4~mv2.jpg/v1/fill/w_980,h_783,al_c,q_90,enc_auto/c5cdf7_d2feb66b1bdc4bdbb93750f9112e5aa4~mv2.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .continer-div-2{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+        padding-right: 7%;
+        width: 100%;
+        height: 80vh; 
+        background-image: url("https://static.wixstatic.com/media/c5cdf7_e35fb71df8734505a712df4fdf9a6759~mv2.jpg/v1/fill/w_1435,h_783,al_t,q_90,enc_auto/c5cdf7_e35fb71df8734505a712df4fdf9a6759~mv2.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .continer-div-3{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80vh; 
+        background-image: url("https://static.wixstatic.com/media/c5cdf7_d2feb66b1bdc4bdbb93750f9112e5aa4~mv2.jpg/v1/fill/w_980,h_783,al_c,q_90,enc_auto/c5cdf7_d2feb66b1bdc4bdbb93750f9112e5aa4~mv2.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .continer-div-4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 80vh; 
+        background-image: url("https://static.wixstatic.com/media/c5cdf7_245b8a3d426a4b22adea049082b4a631~mv2.jpg/v1/fill/w_1613,h_783,al_c,q_90,enc_auto/c5cdf7_245b8a3d426a4b22adea049082b4a631~mv2.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .continer-div-5{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80vh; 
+        background-image: url("https://static.wixstatic.com/media/c5cdf7_52390ab31b9a4b1685a5b3c32ade754b~mv2_d_3835_2078_s_2.jpg/v1/fill/w_1607,h_783,al_c,q_90,enc_auto/c5cdf7_52390ab31b9a4b1685a5b3c32ade754b~mv2_d_3835_2078_s_2.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .continer-div-6{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80vh; 
+        background-image: url("https://static.wixstatic.com/media/c5cdf7_0569da5a8a074fb591fefef9d3ef0dde~mv2.jpg/v1/fill/w_1607,h_783,al_c,q_90,enc_auto/c5cdf7_0569da5a8a074fb591fefef9d3ef0dde~mv2.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    /* Styles Services */
+
+    .section-services{
+        margin-top: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
     }
 
     .title-services{
@@ -325,14 +482,17 @@
         padding: 1.5rem;
         padding-bottom: 0;
         padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
     }
 
     .conteiner-company{
         margin: 2rem;
         margin-left: 10%;
         padding: 4rem;
+        width: 500px;
         justify-content: left;
-        width: 25%;
         background-color: rgba(255, 255, 255, 0.9);
     }
 
