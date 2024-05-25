@@ -8,6 +8,8 @@
     import Carousel from 'svelte-carousel'
     import { browser } from '$app/environment';
     import { Button } from 'flowbite-svelte';
+    import { Textarea, Label, Input, CloseButton } from 'flowbite-svelte';
+    import { EnvelopeSolid, UserOutline, UsersOutline, MessageCaptionOutline, MapPinAltOutline, InboxOutline, PhoneOutline} from 'flowbite-svelte-icons';
     import { ThumbsUpSolid, ArrowRightOutline, ArrowLeftOutline } from 'flowbite-svelte-icons';
 
     let carousel;
@@ -20,7 +22,7 @@
 
 </script>
 
-<div class="conteiner-carousel-divs">
+<div id="home" class="conteiner-carousel-divs">
     {#if browser}
 <Carousel
   bind:this={carousel}
@@ -82,7 +84,7 @@
 
 <!-- SERVICES MAIN PAGE -->
 
-<div class="section-services">
+<div id="services" class="section-services">
     <h1 class="title-services">SERVICES</h1>
     <hr class="separator">
     <p class="text-title">Our multidisciplinary engineering services</p>
@@ -169,7 +171,7 @@
 
    <!-- company section -->
 
-<div class="company-background">
+<div id="company" class="company-background">
     <div class="conteiner-tilte-text">
         <div class="conteiner-company">
             <div class="conteiner-title-company">
@@ -210,6 +212,100 @@
     </div>
 </div>
 
+<section id="contacts">
+    <div class="contacts flex justify-center items-center flex-col mt-12">
+        <h1 class="title-contacts text-[50px] text-[#AAAAAA]"><b>CONTACTS</b></h1>
+        <hr class="separator-contacts">
+        <div class="contacts-items">
+          <div>
+            <p class="text-contacts text-[18px] tracking-normal leading-[1.4em] m-4 ml-0 mt-0">Thank you for your interest in our engineering services .</p>
+            <p class="text-contacts text-[18px] tracking-normal leading-[1.4em] m-2 ml-0 mt-0">
+              If you wish to send us a message, please do not hesitate to fill out
+              the fields below.
+            </p>
+            <p class="text-contacts text-[18px] tracking-normal leading-[1.4em]">
+              We will be happy to get back to you as soon as possible, for any
+              information or to provide you with a free quotation.
+            </p>
+          </div>
+          
+          <div class="flex flex-col justify-center items-start w-full">
+            <div class="w-full">
+                <Label class="space-y-2">
+                    <span>Name</span>
+                    <Input type="text" placeholder="name" size="sm">
+                      <UserOutline slot="left" class="w-4 h-4" />
+                    </Input>
+                  </Label>
+            </div>
+            <div class="mt-4 w-full">
+                <Label class="space-y-2">
+                    <span>Email</span>
+                    <Input type="email" placeholder="example@gmail.com" size="sm">
+                      <EnvelopeSolid slot="left" class="w-4 h-4" />
+                    </Input>
+                  </Label>
+            </div>
+            <div class="mt-4 w-full">
+                <Label class="space-y-2">
+                    <span>Subject</span>
+                    <Input type="text" placeholder="Subject" size="sm">
+                      <UsersOutline slot="left" class="w-4 h-4" />
+                    </Input>
+                  </Label>
+            </div>
+            <div class="mt-4 w-full">
+                <Label for="textarea-id" class="mb-2">Message</Label>
+                <Textarea id="textarea-id" placeholder="Your Message" rows="4" name="message"/>
+            </div>
+          </div>
+          <div class="button">
+            <Button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              Send
+            </Button>
+          </div>
+
+          <div class="flex flex-row w-[95%] justify-between items-center">
+            <div class="w-[80%] flex justify-start items-start m-8 ml-0 mt-5">
+                <iframe class="w-[100%]" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1046.9459941116936!2d13.820555358382034!3d41.48758998178449!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133abc089b8c4c15%3A0x5fb42dfd780a245a!2sCiavolella%20srl!5e0!3m2!1sit!2spe!4v1716248324205!5m2!1sit!2spe" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="flex flex-col justify-center items-end w-[40%]">
+              <h2 class="direction-contact text-[25px] w-full items-start mb-4"><b>Ciavolella S.r.l</b></h2>
+                <a href="" class="flex flex-row items-center justify-center">
+                    <div class="icon-locate"><MapPinAltOutline class="w-10 h-10 mr-4 text-[#AAAAAA]"/></div>
+                    <div class="text-contacts text-[#AAAAAA]">Via Di Biasio, 144 03043 - Cassino  (Fr), Italy </div>
+                </a>
+                <a href="" class="flex flex-row items-center w-full m-4 ml-0 mr-0">
+                    <div class="icon-locate"><InboxOutline class="w-10 h-10 mr-4 text-[#AAAAAA]"/></div>
+                    <div class="text-contacts text-[#AAAAAA]">info@ciavolella.com</div>
+                </a>
+                <a href="" class="flex flex-row items-center w-full">
+                    <div class="icon-locate"><PhoneOutline class="w-10 h-10 mr-4 text-[#AAAAAA]"/></div>
+                    <div class="text-contacts text-[#AAAAAA]">+39 0776 311097</div>
+                </a>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section id="career" class="mb-8">
+    <div class="contacts flex justify-center items-center flex-col mt-12">
+        <h1 class="title-contacts text-[50px] text-[#AAAAAA]"><b>CAREER</b></h1>
+        <hr class="separator-contacts">
+    </div>
+    <div class="contacts-items flex w-full items-center justify-center">
+        <div class="flex justify-center flex-col">
+          <p class="w-[57rem] text-contacts text-[18px] tracking-normal leading-[1.4em] m-4 ml-0 mt-0">Ciavolella engineering è  alla ricerca di persone appassionate, dinamiche, aperte  alla collaborazione e al confronto con voglia di cimentarsi in un ambiente nuovo e in crescita.</p>
+          <p class="text-contacts text-[18px] tracking-normal leading-[1.4em] m-2 ml-0 mt-0">
+            <a href="" class="underline">Clicca qui</a> e scopri le posizioni aperte.
+          </p>
+        </div>
+</section>
+
+
+
+
 <!-- Styles section -->
 
 <style>
@@ -223,6 +319,8 @@
         justify-content: center;
         width: 100%;
         margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 7rem;
         gap: 0;
     }
 
@@ -302,7 +400,7 @@
     /* Styles Services */
 
     .section-services{
-        margin-top: 8rem;
+        margin-top: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -377,7 +475,7 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         background-color: #F5F5F5;
     }
 
@@ -570,5 +668,32 @@
         align-items: center;
         justify-content: center;
     }
+
+    /* CONTACTS SECTION */
+
+    .title-contacts{
+        font-family: "Sora", sans-serif;
+    }
+
+    .separator-contacts{
+        width: 10%;
+        border: 5px solid #1B99E8;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .text-contacts{
+        font-family: barlow-medium, barlow,sans-serif;
+    }
+
+    .contacts-items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .direction-contact{
+    font-family: barlow-medium, barlow,sans-serif;
+  }
     
 </style>
