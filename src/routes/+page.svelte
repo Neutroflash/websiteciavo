@@ -1,20 +1,12 @@
 <script>
-    import Services from "./Services/services.svelte";
+    import Main from "./Main/Main.svelte";
     import Navbar from "./navbar/navbar.svelte"
-    import Contact from "./contact/contact.svelte";
     import Footer from "./footer/footer.svelte";
 </script>
 <div class="wrapper">
       <Navbar/>
-  <section class="services">
-      <Services/>
-  </section>
-  <section class="contacts">
-      <Contact/>
-  </section>
-  <footer class="footer">
+      <Main/>
       <Footer/>
-  </footer>
 </div>
 
 <style>
@@ -32,13 +24,5 @@
     gap: 30px;
   }
 
-  .contacts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-inline: auto;
-    padding: 40px 50px;
-  }
 
 </style>
