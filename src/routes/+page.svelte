@@ -16,13 +16,5 @@
     min-height: 100vh;
   }
 
-  .footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: #f5f5f5;
-    padding: 40px;
-    gap: 30px;
-  }
-
 
 </style>
