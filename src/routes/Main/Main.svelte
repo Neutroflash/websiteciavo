@@ -22,7 +22,7 @@
 
 </script>
 
-<div id="home" class="conteiner-carousel-divs">
+<div id="home" class="conteiner-carousel-divs w-full">
     {#if browser}
 <Carousel
   bind:this={carousel}
@@ -32,11 +32,11 @@
   pauseOnFocus
 >
 
-<div slot="next" class="flex w-full h-full justify-end items-center m-0 bg-transparent absolute">
-    <Button on:click={handleNextClick} pill class="!p-2 m-3 bg-sky-400 hover:bg-[#8B0000]"><ArrowRightOutline class="w-6 h-6" /></Button>
+<div slot="next" class=" flex w-[5%] h-full justify-end items-center ml-[95%] bg-transparent absolute">
+    <Button on:click={handleNextClick} pill class="!p-2 m-3 bg-sky-400 hover:bg-[#8B0000] "><ArrowRightOutline class="w-6 h-6" /></Button>
 </div>
 
-<div slot="prev" class="flex w-1/2 h-full justify-start items-center m-0 bg-transparent absolute z-[1]">
+<div slot="prev" class="flex w-[5%] h-full justify-start items-center m-0 bg-transparent absolute z-[1]">
     <Button on:click={handlePrevClick} pill class="!p-2 m-3  bg-sky-400 hover:bg-[#8B0000]"><ArrowLeftOutline class="w-6 h-6" /></Button>
 </div>
 
@@ -302,9 +302,6 @@
           </p>
         </div>
 </section>
-
-
-
 
 <!-- Styles section -->
 
